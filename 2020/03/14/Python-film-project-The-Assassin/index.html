@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="creative media practice,python,film studies,digital humanities," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="IntroductionThis is a project which aim to propose the scope, materials and approaches for a Digital Humanities oriented research that includes and relies to some extent on the element of Python codin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python film project: The Assassin">
+<meta property="og:url" content="http://yoursite.com/2020/03/14/Python-film-project-The-Assassin/index.html">
+<meta property="og:site_name" content="Yiqing Li">
+<meta property="og:description" content="IntroductionThis is a project which aim to propose the scope, materials and approaches for a Digital Humanities oriented research that includes and relies to some extent on the element of Python codin">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-14T08:07:17.724Z">
+<meta property="article:author" content="Yiqing Li">
+<meta property="article:tag" content="creative media practice">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="film studies">
+<meta property="article:tag" content="digital humanities">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/14/Python-film-project-The-Assassin/"/>
+
+
+
+
+
+  <title>Python film project: The Assassin | Yiqing Li</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yiqing Li</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">digital media, design, art</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/home/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/14/Python-film-project-The-Assassin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yiqing Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yiqing Li">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python film project: The Assassin</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-14T00:00:00+08:00">
+                2020-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python-project/" itemprop="url" rel="index">
+                    <span itemprop="name">Python project</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>This is a project which aim to propose the scope, materials and approaches for a Digital Humanities oriented research that includes and relies to some extent on the element of Python coding. </p>
+<p>This project consists of proposal and python coding, followed by an essay which critically describes and assesses the act of coding and building things in the digital humanities.</p>
+<h1 id="Proposal"><a href="#Proposal" class="headerlink" title="Proposal"></a>Proposal</h1><p>The Assassin (2015) is a wuxia film (a sub-genre of the martial arts film based on mythology and often associates with political conflicts) directed by Hou Hsiao-hsien. Once the film was released, there were polarised discussions about the story and mise-en-scene (such as colour, lighting, composition and so on) in China due to difficulty to be interpreted and understood. The same discussions happened on Rotten Tomatoes as the tomatometers (critics) give the film 80% of freshness, while there is 47% of audience has rated 3.5 stars or higher. My project aims to investigate what do western audience think of the story and mise-en-scene of this film, and how much do they understand and like the film. The project tries to state that western audience are able to interpret the film’s story and mise-en-scene very simply, as the generated WordCloud shows words like ‘beautiful’, ‘martial’, ‘Chinese’. The polarised discussions exist due to both positive and negative adjectives in 50 highest-frequency words chart. The average sentiment tends to be neutral, which means they do not show obvious preferences of this film. In conclusion, mise-en-scene is able to work effectively on a very basic level of interpretation for the western audience, but probably fails to evoke more responses on cultural dimension. </p>
+<p>The project will mine the data which contains a total of 284 reviews on Rotten Tomatoes from both critics and audience to produce average analysis. The implementation will be divided into four steps. Firstly, I will use BeautifulSoup to create two loops to iteratively scrape all the content includes names, dates, reviews and scores from both audience and critics. Secondly, I will import Pandas and use DataFrame to visualise the scraped data in a chart. Thirdly, I will use WorldCloud to visualise some most frequency words. The aim is to offer a simple overview of the words that being mentioned the most in all the reviews. Fourthly, in order to process more accurate analysis of word frequency of reviews, the NLP will be applied to process by following a process order of segmentation, cleaning, normalisation and tokenisation. By using matplotlib, the 50 highest-frenquency words will be visualised to form a line chart in order to see counts of each word and the variation between all these words. Finally, the sentiment analysis will be applied to get polarity and subjectivity of each piece of review and the mean scores of all the reviews. </p>
+<p>Scholars could be able to compare the analysis with others across different platforms, discovering and annotating implications of the data, digital platforms. On the other hand, research questions such as ‘in what ways mise-en-scene can help people from different culture backgrounds understand certain culture elements effectively’ could be formed. For the public, reviews could be used to decide whether they should watch the film or not. Economically, the data can be referenced by film production companies for marketing analysis and the data is able to applied on producing other films.</p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p>Click <a href="https://github.com/totoma14/PythonFilm.git" target="_blank" rel="noopener">here</a> to check python coding.</p>
+<h1 id="Essay"><a href="#Essay" class="headerlink" title="Essay"></a>Essay</h1><p><em>Question: What is the nature of building knowledge model for co-creation through crowdsourcing of film reviews? In what ways do coding help or hinder to build the model?</em></p>
+<p>As a traditional form of media, films work on delivering visual information through moving pictures on the screen. The rise of the network industry and the acceleration of the information revolution are changing the traditional pattern of the film industry. The ‘big six’ (20th Century Fox, Warner Bros., Paramount Pictures, Columbia Pictures, Universal Pictures and Walt Disney Pictures) is gradually substituted by steaming media companies, such as Netflix (Institute and Posts, 2019). On the other hand, the film industry is gradually penetrated by co-creation through crowdsourcing, as the film reviews and ratings from the crowd online has been accepted as important evaluation to be considered by the film industry. Web 2.0, a combination of changes in ways that websites are produced and used, has brought the digital users on stage to generate co-creation digital content and knowledge. The examples are taken to online database and review-aggregation websites for film and television, such as IMDb and Rotten Tomatoes. Based on my digital humanities python project which I scraped reviews data of the film called The Assassin (2015) on Rotten Tomatoes, building visuals to investigate and analyse the audience’s perspectives, preferences, and understandings of story and mise-en-scene of the film, this summative essay will present argument in the implications of crowdsourcing, data, and coding to discuss the nature of knowledge and the nature of building knowledge model based on study of digital humanities.</p>
+<p>Crowdsourcing is a new way of interacting with knowledge. The core concept for crowdsourcing based on the wisdom of large groups of people (Garcia Martinez and Walton, 2019). The web 2.0 facilitates networking between users and builds interaction between technologies and knowledge creation. The digital users are allowed to get access to any digital platform anywhere, therefore create distributed knowledge (Burdick, 2012). Because of the development of high-speed networks, knowledge creation is becoming saturated and the production, access, and dissemination are becoming ‘ever-more distribution processes’ (Burdick, 2012, p,50). Crowdsourcing create new possibilities for people who gain basic technology skills to get access to create, share and gain knowledge. It means the users are able to generate their own knowledge and collaborate with others to build, edit and manage content altogether. In field of digital humanities, this model allows a reconstruction of humanities with digital technologies, forming new interpretation under contemporary social framework, linking with contemporary disciplines, bringing new life to deal with contemporary issues. For example to work with python, the film reviews as co-creation through crowdsourcing can be reinterpreted, organised and presented by visuals to support academic research or to be used by society at large.</p>
+<p>On the other hand, crowdsourcing challenges the control power of knowledge. Traditionally, knowledge and access of knowledge are controlled by institutions and authorities. Burdick (2012, p.91) points out that the freedom of exploring otherness followed by ‘truly social and participatory forms of cultural creation’ is the very vital sense of the decolonisation of the knowledge. As Francis Bacon says, knowledge is power (Ajana, 2017). The decolonisation of knowledge discrete the power which could indicate a platform controlled by dominant individuals and industries, or embedded ideologies of digital environment. It challenges ‘the normative assumptions that encode ideological assumptions in operational features’ (Burdick, 2012, p.91). In some extents, this openness could be motivations for users to share their perspectives and knowledge online. Because they are able to express themselves freely without being afraid of authorities, or being tied up by specific ideologies. On the other hand, comments from the other users or exchange of knowledge and information could be incentives as well. </p>
+<p>Nevertheless, ‘the wisdom of the crowd’ does not mean the higher quality of knowledge. Keen argues that ‘what the Web 2.0 revolution is really delivering is superficial observations of the world around us rather than deep analysis, shrill opinion rather than considered judgment’ (2007). One of the reasons could be, the fast-developed technology bring up an explosion of information. The open access offer the public a cheap and easy way generate and deliver messages and information. Anyone who can use internet, is able to generate any message online without paying much costs. There are a lot of valueless messages are generated repeatedly, which even make the information becomes cheaper. Hence, the co-creation through crowdsourcing could be able to lack values and become a sort of information garbage. Processing data needs time. The more data need to be cleaned, the more time is consumed. Finally, data is commercialised for marketing use. Social media platforms, such as Twitter, require a large amount of user data in order to analyse the users and their behaviours to draw user patterns. Businesses need analysed data to conclude market performance and predict preferences of customers, in order to make marketing strategies, reduce costs and increase benefits. The streaming media company Netflix is an example. When Netflix first entered film and television production, it was considered as a spoiler. But then the reason that Netflix goes beyond Disney, HBO and Hulu is because of a complete system of technology. In 2012, Netflix launched a project to motivate engineers to continuously update recommendation algorithms to improve user experience. At the same time, Netflix applied big data analysis to produce and optimism original content in order to find the easiest way to attract users by the content. The aim is to let users get highly personalised content recommendation anytime. </p>
+<p>When code makers do data mining, it is necessary to think of ‘what constitutes the data’ and ‘the ways in which these data are structured’ (Burdrick, 2012, p. 42). Primarily, it is necessary to understand background of sources of information. There are two widely used review-aggregation websites for film and television, which are IMDb and Rotten Tomatoes. On IMDb, only the subscribers are able to rate films, which means that the rating system targets its particular group. Besides, Rating could not always make sense without reviews. IMDb users left very limited number of reviews. While on Rotten Tomatoes, people can see debates about the film, which makes rating not just a result but actually based on some opinions from raters. Rotten Tomatoes divides ratings system into ratings from critics and ratings from audience. What it tries to do is to organise both reviews and ratings from both critics and audience to make ratings and reviews make sense as much as possible. IMDb is not a representative of worldwide, instead, it is very likely the U.S. dominated because the rating demographic simply divides raters from U.S. and outside the U.S. (IMDb, 2019). As Hollywood is the world’s centre of film industry, IMDb is more likely represent a mainstream ideologies and values of American and world film industry. Therefore, if the project based on mining the data from IMDb, then the data output is embedded the mainstream ideologies and values as well. </p>
+<p>From the screen to the output data, the whole information transmission processes refer to two forms of messages: information as signals and information as data. Each information transmission is a reinterpretation based on different interpretive context and purposes. The initial visual information has been encoded and decoded by film audience and the process based on encoding/decoding model. Hall defines encoding/decoding model as a process which the media text is produced and then interpreted (Bounds, 1993).The codes are not absolutely symmetrical due to the understanding and misunderstanding by both ‘encoder-producers and decoder-producers’ (Hall, 1993, p.510). The information which the film presents, refers to mise-en-scene which is defined as the consists of all the elements that a viewer can see on the screen, such as colour, lighting, settings, props, composition and so on (Sikov, 2011). Mise-en-scene delivers visual information which is produced by the film’s narrative (Kuhn and Westwell, 2012). These visual messages are encoded by the director and cinematographers, being transmitted to the audience. Each audience has unique way to decode the messages based on personal social and cultural experience. When they write reviews on review-aggregation websites for the film, they need to transfer the received messages from visual format to textual format to finish encoding. </p>
+<p>Then the transmission process goes to the information as data. When a code maker mines reviews and put them into any programming language such as python, Natural Language Processing (NLP) which is the interactions between computers and human languages, is applied to process the input text and transfers it into data. The final results are printed as visuals to be presented to any other viewers. This transmission process involves an issue of data mining which concerns if humanities knowledge can be functioned by programming language and quantified, as programming language is completely different with human natural language. </p>
+<p>The first issues is, in what extent, programming language is able to recognise social and cultural variables in natural language. The output of programming language is data. Data does not have social and cultural meaning itself, but is given by contexts. For example, when data is put into a framework of cultural analytics project, it may represent visual interfaces such as infographics; when data is put into digital mapping to show any changes of a historical place during a period of time, it may contain both geographic and historical implications; when data is put into corpus analysis of historical literature, it may have implications of history and linguistics. Apart from study of digital humanities, data reflects biological meaning when it used to be quantified the body and self. On social media platforms, a very large amount data of the users are collected to be analysed to support commercial behaviours as products, or to be used to predict political campaigns or elections. All in all, everything which could be filled with data, is able to give specific implications to data. As what Lupton said, ‘digital data are culturally represented as liquid entities that require management and containment’ (Lupton, 2016, P.88). </p>
+<p>Further, watching a film involves more complicated communication which engages multiple senses included hearing and vision. Therefore, another question is risen: can senses being interpreted and quantified? For audience, watching a film is more likely to be a one-way communication as they receive messages from the screen and trying to decode by themselves. When they sit at a cinema in darkness, their senses are refined and unconsciously enhanced, which allows the audience to capture more detailed signals which are transmitted by the film from the screen. During the watching process, all the senses are working together to deal with understanding and interpreting the messages. The reproduction of these messages is subjectively. Programming language is able to use TextBlob to define sentiment of reviews by polarity which is ranged between -1(negative statement) and +1(positive statement) (TextBlob, 2019). Sentiments of any single lexical item and any simple sentence are able to be well-defined. However, it could be hard for TextBlob to define satires due to complexity of contexts. Therefore, if a piece of review is complicated enough, then the sentiment analysis is likely not to be able to work precisely. Moreover, the polarity works on the scale, which means if there is a lack of lexical items to be compared with each other on the scale, hence, polarity of each lexical item will not be precisely measured. However, people could not even define and quantify every single kind of sentiment, then how can they work to quantify sentiment on a scale?</p>
+<p>Yet we are still not sure about in what extent and what other ways the technologies can collaborate with humanities to form new interpretation and creation of knowledge for academic and social use. Burdick argues that study humanities is not based in ‘calculation, automation, or statistical probability’ (Burdick, 2012, p.92). Humanities are subjective and observer-dependent, has contingency and ambiguity, which allow knowledge to be formed both ‘ontologically and socially’ (Burdick, 2012, p.92). It is necessary for us to keep thinking of in what extent technologies and humanities exert influence scientifically, socially and culturally. The technologies should help to work with humanities to create new models of studying humanities in contemporary society and the future. </p>
+<p><u><em>Filmography</em></u></p>
+<p><em>The Assassin</em> (2015)</p>
+<p><u><em>Bibliography</em></u></p>
+<p>Ajana, B. (2017). <em>Digital health and the biopolitics of the Quantified Self</em>. DIGITAL HEALTH, 3, p.205520761668950.</p>
+<p>Bounds, p. (1993). <em>Cultural Studies: A Student’s Guide to Culture</em>, Politics and Society, Plymouth: Studymates</p>
+<p>Burdick, A. (2012). <em>Digital humanities. Cambridge</em>, Mass.: MIT Press.</p>
+<p>Garcia Martinez, M. and Walton, B. (2014). The wisdom of crowds: The potential of online communities as a tool for data analysis. <em>Technovation,</em> 34(4), pp.203-214.</p>
+<p>Hall, S. (1993). ‘Encoding, decoding’, in Smith, S.D. (ed.) <em>The Cultural Studies Reader</em>. London; New York: Routledge.</p>
+<p>IMDb. (2019). <em>Ratings and Reviews for New Movies and TV Shows - IMDb.</em> [online] Available at: <a href="https://www.imdb.com/?ref_=nv_home" target="_blank" rel="noopener">https://www.imdb.com/?ref_=nv_home</a> [Accessed 30 Apr. 2019].</p>
+<p>Institute, M. and Posts, R. (2019). <em>Big Six | MAAC India Academy Animation &amp; VFX Industry Blog – MAAC India Institute.</em> [online] Maacindia.com. Available at: <a href="https://www.maacindia.com/blog/big-six" target="_blank" rel="noopener">https://www.maacindia.com/blog/big-six</a> [Accessed 29 Apr. 2019].</p>
+<p>Lupton, D. (2016) <em>The quantified self : a sociology of self-tracking**.</em> Cambridge, UK; Malden, MA, USA : Polity </p>
+<p>Keen, A.,(2007) <em>The Cult of the Amateur</em>, London : Nicholas Brealey</p>
+<p>Kuhn, A. and Westwell, G. (2012). A dictionary of film studies. Oxford: Oxford University Press.</p>
+<p>Sikov, E. (2011). Film studies. New York: Columbia University Press.</p>
+<p>TextBlob, N. (2019). <em>Natural Language Processing for Beginners: Using TextBlob**.</em> [online] Available at: <a href="https://www.analyticsvidhya.com/blog/2018/02/natural-language-processing-for-beginners-using-textblob/" target="_blank" rel="noopener">https://www.analyticsvidhya.com/blog/2018/02/natural-language-processing-for-beginners-using-textblob/</a> [Accessed 30 Apr. 2019].</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/creative-media-practice/" rel="tag"># creative media practice</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/film-studies/" rel="tag"># film studies</a>
+          
+            <a href="/tags/digital-humanities/" rel="tag"># digital humanities</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/12/Portfolio-of-video/" rel="next" title="Portfoilo of video">
+                <i class="fa fa-chevron-left"></i> Portfoilo of video
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="Yiqing Li" />
+            
+              <p class="site-author-name" itemprop="name">Yiqing Li</p>
+              <p class="site-description motion-element" itemprop="description">portfolio of work</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Proposal"><span class="nav-number">2.</span> <span class="nav-text">Proposal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Essay"><span class="nav-number">4.</span> <span class="nav-text">Essay</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yiqing Li</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
